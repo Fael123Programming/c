@@ -15,6 +15,7 @@ int main(){
     cout << pow(10, log10(10)) << endl;
     cout << ceil(-23.44) << endl; //round upward.
     cout << floor(-23.44) << endl; //round downward.
-
+    cout << sin(0) << endl;
+    cout << cos(3.141592 * 59.72) << endl;
     return 0;
 }

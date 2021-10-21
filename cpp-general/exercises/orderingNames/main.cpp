@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "sortMethod/insertionSortForStrings.h"
+#include "sortMethod/insertionSortForStrings.cpp"
 
 using namespace std;
 
@@ -23,6 +23,7 @@ int main(){
         cout << names[i] << endl;
     }
     cout << "-------------------------------------------------------------------------------------------------------------\n";
+    system("pause");
 
     return 0;
 }

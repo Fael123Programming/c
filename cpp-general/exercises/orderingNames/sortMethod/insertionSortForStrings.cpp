@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-using namespace std;
+
+using std::string;
 
 typedef struct insort {
     void sortStrings(string strArray[], int arraySize) {

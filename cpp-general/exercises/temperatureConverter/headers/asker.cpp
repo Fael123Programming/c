@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
-using namespace std;
+
+using std::cout;
+using std::cin;
+using std::string;
 
 typedef struct asker {
     string menu(){

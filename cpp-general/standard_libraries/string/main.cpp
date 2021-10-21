@@ -1,8 +1,7 @@
 #include <iostream>
 #include <string> 
 //This header file provides us the class string.
-//Then going from it we can instantiate string 
-//objects by calling a constructor function.
+//Then going from it we can instantiate string objects by calling a constructor function.
 
 using namespace std;
 

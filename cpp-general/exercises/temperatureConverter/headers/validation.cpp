@@ -3,7 +3,8 @@
 #include <cctype>
 #include <cstdlib>
 
-using namespace std;
+using std::string;
+
 typedef struct validation {
     bool isInvalidOpt(string opt, int from, int to) {
         int optNum = atoi(opt.c_str());

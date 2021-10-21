@@ -2,9 +2,9 @@
 #include <string>
 #include <cstdlib>
 #include <cctype>
-#include "headers/converter.h"
-#include "headers/asker.h"
-#include "headers/validation.h"
+#include "headers/converter.cpp"
+#include "headers/asker.cpp"
+#include "headers/validation.cpp"
 
 using namespace std;
 
@@ -21,17 +21,17 @@ int main(){
     while (1) {
         opt = asker.menu();
         if(val.isInvalidOpt(opt, 1, 4)) {
-            cout << "-----------------------------------------------------------------\n";
-            cout << "                   -> Invalid option <-\n";
+            cerr << "-----------------------------------------------------------------\n";
+            cerr << "                   -> Invalid option <-\n";
             cout << "-----------------------------------------------------------------\n";
         } else if (opt == "1") {
             cout << "Celsius: ";
             cin >> temp;
             system("cls");
             if (val.isInvalidNumber(temp)) {
-                cout << "-----------------------------------------------------------------\n";
-                cout << "                   -> Invalid number <-\n";
-                cout << "-----------------------------------------------------------------\n";
+                cerr << "-----------------------------------------------------------------\n";
+                cerr << "                   -> Invalid number <-\n";
+                cerr << "-----------------------------------------------------------------\n";
             } else {
                 cout << "-----------------------------------------------------------------\n";
                 cout << "Celsius: " << temp << endl;
@@ -44,9 +44,9 @@ int main(){
             cin >> temp;
             system("cls");
             if (val.isInvalidNumber(temp)) {
-                cout << "-----------------------------------------------------------------\n";
-                cout << "                   -> Invalid number <-\n";
-                cout << "-----------------------------------------------------------------\n";
+                cerr << "-----------------------------------------------------------------\n";
+                cerr << "                   -> Invalid number <-\n";
+                cerr << "-----------------------------------------------------------------\n";
             } else {
                 cout << "-----------------------------------------------------------------\n";
                 cout << "Fahrenheit: " << temp << endl;
@@ -59,9 +59,9 @@ int main(){
             cin >> temp;
             system("cls");
             if (val.isInvalidNumber(temp)) {
-                cout << "-----------------------------------------------------------------\n";
-                cout << "                   -> Invalid number <-\n";
-                cout << "-----------------------------------------------------------------\n";
+                cerr << "-----------------------------------------------------------------\n";
+                cerr << "                   -> Invalid number <-\n";
+                cerr << "-----------------------------------------------------------------\n";
             } else {
                 cout << "-----------------------------------------------------------------\n";
                 cout << "Kelvin: " << temp << endl;
