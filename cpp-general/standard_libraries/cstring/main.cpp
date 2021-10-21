@@ -15,5 +15,6 @@ int main(){
     cout << "Mezadus has " << strlen("mezadus") << " chars.\n";
     string name = "Mezadus";
     cout << name << " has " << name.length() << " chars.\n";
+    cout << NULL << endl;
     return 0;
 }
