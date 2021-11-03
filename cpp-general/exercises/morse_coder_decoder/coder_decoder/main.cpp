@@ -155,22 +155,14 @@ typedef struct morseConversor {
 
     string decode(string toDecode) {
         string res, letter;
-        short spaces = 0;
-        for (int i = 0; i < toDecode.length() - 1; i++) {
-            if (toDecode.at(i) != ' ' && toDecode.at(i + 1) != ' ') letter += toDecode.at(i);
-            spaces = toDecode.at(i) == ' '? spaces + 1 : 0;
-            if (spaces == 3 && toDecode.at(i + 1) != ' ') { //A letter has been record.
-                if (letter == ". ---") {
-                    res.append("a");
-                } else if (letter == "--- . . .") {
-                    res.append("b");
-                } else if(letter == "--- . --- .") {
-                    res.append("c");
-                }
-            } else if (spaces == 7 && toDecode.at(i + 1) != ' ') {
-                res.append(" ");
-            }
-        }
+        /*short spaces = 0;
+        for (int i = 0; i < toDecode.length(); i++) {
+            if (toDecode.at(i) == ' ') spaces++;
+            else spaces = 0;
+            letter += toDecode.at(i);
+            toDecode.swap()
+            
+        }*/
         return res;
     }
 }morseConversor;
