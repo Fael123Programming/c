@@ -4,6 +4,9 @@
 using std::string;
 
 typedef struct insort {
+    //This method sorts a group of names passed in an array in
+    //alfabetic order.
+    
     void sortStrings(string strArray[], int arraySize) {
         string temp;
         int i;
