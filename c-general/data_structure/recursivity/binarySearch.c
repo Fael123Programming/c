@@ -16,11 +16,29 @@ int firstPos, lastPos;
     return number == vector[mid] ? mid : number < vector[mid] ? binSrch(firstPos, mid - 1) : binSrch(mid + 1, lastPos);
 }
 
+int bs(int *array, int low, int high, int wanted) {
+    if (low > high) //Cost 1
+        return low;  //Cost 1
+    int mid = (low + high) / 2; //Cost 1
+    if (wanted == array[mid]) //Cost 1
+        return mid; //Cost 1
+    else if (wanted < array[mid]) //Cost 1
+        return bs(array, low, mid - 1, wanted); //Cost T(n / 2) 
+    else
+        return bs(array, mid + 1, high, wanted); //Cost T(n / 2)       
+}
+
+int binarysearch(int *numbers, int size, int wanted) {
+    return bs(numbers, 0, size - 1, wanted);
+}
+
 int main(){
-    int position = binSrch(0,7); //Passing vector's range.
+    /*int position = binSrch(0,7); //Passing vector's range.
     if (position != -1) {
         printf("%d is in position %d\n",number,position);
     } else printf("We did not find %d\nSorry...",number);
-    printf("--------------------------------------\n");
+    printf("--------------------------------------\n");*/
+    int numbers[] = {89, 100, 120, 560, 4569, 10000};
+    printf("%d\n", binarysearch(numbers, 6, 3123123123));
     return 0;
 }
