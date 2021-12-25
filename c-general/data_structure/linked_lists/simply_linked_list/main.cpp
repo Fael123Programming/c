@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include <stdlib.h>//Functions such as malloc,calloc,realloc and exit.
+#include <stdlib.h>//Functions such as malloc, calloc, realloc and exit.
 
 typedef struct Cell{
     int data;
-    struct Cell *next;
+    Cell *next;
 }Cell;
 
 typedef struct LinkedList{
@@ -13,9 +13,9 @@ typedef struct LinkedList{
 }LinkedList;
 
 void start(LinkedList *list){
-    list->first=NULL;
-    list->last=NULL;
-    list->numberOfElements=0;
+    list->first = NULL;
+    list->last = NULL;
+    list->numberOfElements = 0;
 }
 
 int size(LinkedList *list){
@@ -23,17 +23,16 @@ int size(LinkedList *list){
 }
 
 bool isEmpty(LinkedList *list){
-    return list->numberOfElements==0;
+    return list->numberOfElements == 0;
 }
 
-void insertBeginning(LinkedList *list,int data){
+void insertBeginning(LinkedList *list, int data){
     Cell newCell;
-    newCell.data=data;
-    newCell.next=list->first;
-    list->first=&newCell;
-    if(size(list)==0){
-        list->last=&newCell;
-    }
+    newCell.data = data;
+    newCell.next = list->first;
+    list->first = &newCell;
+    if(isEmpty(list))
+        list->last = &newCell;
     list->numberOfElements++;
 }
 
@@ -47,14 +46,23 @@ Cell *getLast(LinkedList *list){
     return list->last;
 }
 
-int main(){
-    LinkedList *myList=(LinkedList*) malloc(sizeof(LinkedList));
-    start(myList);
-    insertBeginning(myList,20);
-    insertBeginning(myList,10);
-    printf("%d\n",size(myList));
-    printf("%d\n",getFirst(myList)->data);
-    printf("%d\n",getLast(myList)->data);
+int main() {
+    LinkedList *numbers = (LinkedList*) malloc(sizeof(LinkedList));
+    start(numbers);
+    Cell c1;
+    c1.data = 20;
+    c1.next = numbers->first;
+    numbers->first = &c1;
+    numbers->numberOfElements++;
+    numbers->last = &c1;
+    Cell c2;
+    c2.data = 10;
+    c2.next = numbers->first;
+    numbers->first = &c2;
+    numbers->numberOfElements++;
+    //insertBeginning(numbers, -5);
+    printf("First: %d\n", getFirst(numbers)->data);
+    printf("Last: %d\n", getLast(numbers)->data);
 
     return 0;
 }
