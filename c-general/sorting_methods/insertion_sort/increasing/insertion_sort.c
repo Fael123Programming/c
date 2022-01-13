@@ -27,6 +27,7 @@ void print(int *array, int size) {
 
 }
 int main(){
+    printf("Increasing Insertion Sort");
     int numbers[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     print(numbers, MAXSIZE);
     insertion_sort(numbers, MAXSIZE);

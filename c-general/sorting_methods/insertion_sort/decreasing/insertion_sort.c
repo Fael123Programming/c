@@ -16,6 +16,7 @@ void insertion_sort(int *array, int size) {
 }
 
 int main(){
+    printf("Decreasing Insertion Sort");
     int numbers[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     insertion_sort(numbers, MAXSIZE);
     for (int x = 0; x < MAXSIZE; x++) {
