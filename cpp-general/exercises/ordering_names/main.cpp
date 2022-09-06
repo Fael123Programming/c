@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "sortMethod/insertionSortForStrings.cpp"
+#include "insertion_sort/InsertionSort.cpp"
 
 using namespace std;
 
@@ -16,14 +16,12 @@ int main(){
         cout << names[i] << endl;
     }
     cout << "-------------------------------------------------------------------------------------------------------------\n";
-    insort sorter;
+    InsertionSort sorter;
     sorter.sortStrings(names, MAXSIZE);
     cout << "There goes the list above but lexicographically sorted:\n";
     for (int i = 0; i < MAXSIZE; i++) {
         cout << names[i] << endl;
     }
     cout << "-------------------------------------------------------------------------------------------------------------\n";
-    system("pause");
-
     return 0;
 }
