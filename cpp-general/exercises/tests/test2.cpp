@@ -8,7 +8,8 @@ using namespace std;
 #define FACTOR 6.789 //Neither primitive type nor equal sign and semi-colon are required here!
 //FACTOR is also a global entity in the program.
 
-int main(){
+int main() {
+    
     const long double PI(3.141592); //Constant or literal! It cannot be changed.
     //PI = 2.74;
     //The line above is invalid! 

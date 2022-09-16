@@ -2,7 +2,8 @@
 
 using namespace std;
 
-int main(){
+int main() {
+    
     int x, y, z;
     double form1, form2, form3, form4;
     cin >> x >> y >> z;

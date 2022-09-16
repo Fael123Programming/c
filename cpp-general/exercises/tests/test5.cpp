@@ -2,7 +2,8 @@
 
 using namespace std;
 
-int main(){
+int main() {
+    
     //Ternary operator in C++.
     int n1, n2;
     cout << "n1: ";

@@ -4,7 +4,8 @@
 
 using namespace std;
 
-int main(){
+int main() {
+    
     cout << "\n";
     cout << "Next tabulation\t|\n";
     unsigned int num;

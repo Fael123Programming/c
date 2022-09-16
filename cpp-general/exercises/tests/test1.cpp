@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int main(){
+int main() {
     cout << "-------------------------------------------------------------------------------" << endl;
     bool check = !true, check2 = ~false;
     cout << "check is " << check << endl;
@@ -63,7 +63,6 @@ int main(){
     what = 0;
     b = what;
     cout << b << endl; //0 is evaluated as false.
-
 
     return 0;
 }
