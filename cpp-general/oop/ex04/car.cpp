@@ -1,19 +1,17 @@
 #include <iostream>
 
-using std::string;
-
 class Car {
-    string brand; //'private' by default.
+    std::string brand; //'private' by default.
 
     public:
-        string getBrand();
-        void setBrand(string);
+        std::string getBrand();
+        void setBrand(std::string);
 };
 
-string Car::getBrand() {
+std::string Car::getBrand() {
     return brand;
 }
 
-void Car::setBrand(string newBrand) {
+void Car::setBrand(std::string newBrand) {
     brand = newBrand;
 }

@@ -14,7 +14,7 @@ class Date {
         int getSystemDay();
         int getSystemMonth();
         int getSystemYear();
-        std::string toString();
+        std::string toString() const;
     private:
         int day, month, year; //Default value is 0.
 };
@@ -84,6 +84,6 @@ int Date::getSystemYear() {
     return tt->tm_year + 1900;
 }
 
-std::string Date::toString() {
+std::string Date::toString() const {
     return std::to_string(day) + "/" + std::to_string(month) + "/" + std::to_string(year);
 }

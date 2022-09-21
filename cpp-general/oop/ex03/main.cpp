@@ -20,5 +20,6 @@ int main() {
     std::cout << d4.toString() << std::endl;
     //Cast a char to a digit.
     std::cout << static_cast<int>('6') - static_cast<int>('0') << std::endl;
+    //'6'-'0' -> 6 - 0 -> 6.
     return 0;
 }
